@@ -1,4 +1,4 @@
-package controllers;
+package com.sgh.sgh.Controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,21 +18,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import dao.IDaoBitacora;
-import entity.Bitacora;
+import com.sgh.sgh.Dao.IDaoBitacora;
+import com.sgh.sgh.Entity.Bitacora;
 
 @RestController
 
 @CrossOrigin(origins = "*")
-@RequestMapping(value = "/sgh")
+@RequestMapping(value = ("/sgh"))
 public class BitacoraController {
 	@Autowired
 	public IDaoBitacora daoBitacora;
 	
-	@GetMapping(value = "/bitacora/listar", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Bitacora> listaUsuario(){
+	@GetMapping(value = "/bitacora", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Bitacora> getBitacora(){
 		return daoBitacora.findAll();
 	}
+	
 
 	@GetMapping(value ="/bitacora/buscarPorParametro", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Bitacora>> buscarBitacora(

@@ -1,4 +1,4 @@
-package entity;
+package com.sgh.sgh.Entity;
 
 import java.util.Date;
 

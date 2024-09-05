@@ -1,4 +1,4 @@
-package dao.impl;
+package com.sgh.sgh.Dao.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -8,8 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import dao.IDaoBitacora;
-import entity.Bitacora;
+import com.sgh.sgh.Dao.IDaoBitacora;
+import com.sgh.sgh.Entity.Bitacora;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.criteria.CriteriaBuilder;

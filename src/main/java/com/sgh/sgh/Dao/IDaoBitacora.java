@@ -1,9 +1,9 @@
-package dao;
+package com.sgh.sgh.Dao;
 
 import java.util.Date;
 import java.util.List;
 
-import entity.Bitacora;
+import com.sgh.sgh.Entity.Bitacora;
 
 public interface IDaoBitacora {
 	public List<Bitacora> findAll();
